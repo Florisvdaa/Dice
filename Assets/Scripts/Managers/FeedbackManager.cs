@@ -8,6 +8,8 @@ public class FeedbackManager : MonoBehaviour
     [Header("Feedbacks")]
     [SerializeField] private MMF_Player menuOpenFeedback;
     [SerializeField] private MMF_Player menuCloseFeedback;
+    [SerializeField] private MMF_Player openGateFeedback;
+    [SerializeField] private MMF_Player closeGateFeedback;
 
     private void Awake()
     {
@@ -25,4 +27,6 @@ public class FeedbackManager : MonoBehaviour
 
     public MMF_Player MenuOpenFeedback() => menuOpenFeedback;
     public MMF_Player MenuCloseFeedback() => menuCloseFeedback;
+    public MMF_Player OpenGateFeedback() => openGateFeedback;
+    public MMF_Player CloseGateFeedback() => closeGateFeedback;
 }
