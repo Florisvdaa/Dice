@@ -18,4 +18,10 @@ public class DiceRoller : MonoBehaviour
         DiceFace top = faces.OrderByDescending(f => Vector3.Dot(f.transform.up, Vector3.up)).First();
         return top.GetFace();
     }
+
+    public bool IsDiceSettled()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        return rb.linearVelocity.sqrMagnitude < 0.01f && rb.angularVelocity.sqrMagnitude < 0.01f;
+    }
 }
