@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dice_d8
       objectReference: {fileID: 0}
+    - target: {fileID: 8487774166380402409, guid: 3be1f75480e55f5438560d52f18275e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a75a53f7b2a37494baecfd246360d144, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
