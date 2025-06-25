@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dicePrefabs:
+  - {fileID: 5457833426638561318, guid: 03385848eba276f43bd45f5fc4e58195, type: 3}
   - {fileID: 5457833426638561318, guid: b5b6df3626aa99443a1af75d0569c3c3, type: 3}
   - {fileID: 1920892326842746625, guid: 635f7f9584c0df54991e7ab44c5c8afb, type: 3}
   - {fileID: 9190534775400057149, guid: 86bbd641d3ead93449dfc69e00ecac52, type: 3}
   - {fileID: 9190534775400057149, guid: fe15cdf59f8a0c549991ccd4f272c451, type: 3}
   - {fileID: 9190534775400057149, guid: c443eb636d20a4a43a12596036ce160b, type: 3}
+  spawnPoint: {fileID: 4367896717960846477}
+  removeParticle: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
