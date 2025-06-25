@@ -12,9 +12,11 @@ public class DiceManager : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] private Transform spawnPoint; // Point where the dice will spawn
+    [SerializeField] private AudioClip rollSound;
 
     [Header("Remove VFX")]
     [SerializeField] private GameObject removeParticle; // Particle effect for dice removal
+    [SerializeField] private AudioClip removeSound;
 
     // Runtime state
     private List<DiceRoller> activeDice = new(); // List of currently spawned dice
@@ -47,6 +49,9 @@ public class DiceManager : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
+            AudioManager.Instance.PlayClipAt(transform.position, rollSound, 0.5f);
+
+
             // Find the prefab matching the selected number of sides
             var prefab = dicePrefabs.FirstOrDefault(d => d.name.Contains($"D{sides}"));
             if (prefab == null) yield break;
@@ -104,6 +109,7 @@ public class DiceManager : MonoBehaviour
         foreach (var die in activeDice)
         {
             Instantiate(removeParticle, die.transform.position, Quaternion.identity);
+            AudioManager.Instance.PlayClipAt(transform.position, removeSound, 0.3f);
             Destroy(die.gameObject);
         }
 
